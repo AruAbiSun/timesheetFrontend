@@ -18,7 +18,7 @@ const UserRegister = () => {
     const payloads = { username, email, password, role };
     await axios
       .post(
-        "http://localhost:4000/api/employee/register",
+        "https://timesheetbackend-geyq.onrender.com/api/employee/register",
         payloads
       )
       .then((res) => toast.success(res.data.message))
@@ -80,9 +80,10 @@ const UserRegister = () => {
                     />
                   </div>
                   <br></br>
-                    <button
+                  <button
                     type="submit"
-                    className="btn btn-primary btn-block mt-3">
+                    className="btn btn-primary btn-block mt-3"
+                  >
                     Register
                   </button>
                   <p className="mt-3 text-center">

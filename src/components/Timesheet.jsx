@@ -21,9 +21,12 @@ const Timesheet = () => {
 
   const fetchTimesheets = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/timesheet/get", {
-        headers: { Authorization: token },
-      });
+      const res = await axios.get(
+        "https://timesheetbackend-geyq.onrender.com/api/timesheet/get",
+        {
+          headers: { Authorization: token },
+        }
+      );
       setTimesheets(res.data.data);
     } catch (error) {
       console.error("Error fetching timesheets:", error);
@@ -36,7 +39,7 @@ const Timesheet = () => {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:4000/api/timesheet/update/${editId}`,
+          `https://timesheetbackend-geyq.onrender.com/api/timesheet/update/${editId}`,
           formData,
           {
             headers: { Authorization: token },
@@ -46,7 +49,7 @@ const Timesheet = () => {
         setEditId(null);
       } else {
         await axios.post(
-          "http://localhost:4000/api/timesheet/create",
+          "https://timesheetbackend-geyq.onrender.com/api/timesheet/create",
           formData,
           {
             headers: { Authorization: token },
