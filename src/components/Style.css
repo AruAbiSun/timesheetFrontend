@@ -1,0 +1,53 @@
+h3,
+label,
+p {
+  color: #133e87;
+}
+
+a {
+  color: #133e87;
+}
+.btn-primary {
+  width: 100%;
+  background-color: #133e87;
+}
+.btn-primary:hover {
+  background-color: #608bc1; /* Blue color on hover */
+  color: #ffffff; /* White text on hover */
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f3f3e0;
+  /* width: 100%; */
+  /* box-sizing: content-box; */
+  width: 30vw;
+  /* background: transparent;
+  backdrop-filter: blur(1px); */
+}
+.form-container {
+  display: none;
+}
+.form-container.active {
+  display: block;
+}
+.form-control {
+  background-color: #cbdceb; /* Light blue background */
+  color: #333; /* Dark text color */
+}
